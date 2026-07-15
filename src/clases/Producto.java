@@ -11,6 +11,25 @@ public class Producto {
     private double precio;
     private boolean estado;
     
+    //Constructores
+    //1. Vacío por defecto
+    public Producto() {
+    }
+    
+    //2. Parametrizado completo
+    public Producto(int codigo, int stock, int categoriaID, int proveedorID, int sedeID, 
+                    String nombre, String descripcion, double precio, boolean estado) {
+        this.codigo = codigo;
+        this.stock = stock;
+        this.categoriaID = categoriaID;
+        this.proveedorID = proveedorID;
+        this.sedeID = sedeID;
+        this.nombre = nombre;
+        this.descripcion = descripcion;
+        this.precio = precio;
+        this.estado = estado;
+    }
+    
     //getters y setters
     public int getCodigo() {
         return codigo;
@@ -81,24 +100,6 @@ public class Producto {
     }
 
     public void setEstado(boolean estado) {
-        this.estado = estado;
-    }
-    
-    //Constructores
-    //1. Vacío por defecto
-    public Producto() {
-    }
-    //2. Parametrizado completo
-    public Producto(int codigo, int stock, int categoriaID, int proveedorID, int sedeID, 
-                    String nombre, String descripcion, double precio, boolean estado) {
-        this.codigo = codigo;
-        this.stock = stock;
-        this.categoriaID = categoriaID;
-        this.proveedorID = proveedorID;
-        this.sedeID = sedeID;
-        this.nombre = nombre;
-        this.descripcion = descripcion;
-        this.precio = precio;
         this.estado = estado;
     }
 }
