@@ -3,7 +3,7 @@ package clases;
 import java.time.LocalDateTime;
 
 public class Venta {
-
+    /**
     private int ventaID;
     private LocalDateTime fechaVenta;
     private double total;
@@ -76,4 +76,5 @@ public class Venta {
     public String toString() {
         return "Venta N° " + ventaID;
     }
+    */
 }
