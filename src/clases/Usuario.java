@@ -1,33 +1,44 @@
 package clases;
 
+/**
+ * @author MendozaAnahi
+ */
+
 public class Usuario {
-
-    private int usuarioID;
-    private String nombre;
-    private String apellido;
-    private String correo;
-    private String contrasena;
-    private Rol rol;
-
+    //Atributos de la tabla
+    private int usuarioID, rolID;
+    private String nombre, apellido, correo, contrasena;
+    
+    //Constructores
+    //1. Vacío por defecto
     public Usuario() {
     }
 
-    public Usuario(int usuarioID, String nombre, String apellido,
-                   String correo, String contrasena, Rol rol) {
+    //2. Parametrizado completo
+    public Usuario(int usuarioID, int rolID, String nombre, String apellido, String correo, String contrasena) {
         this.usuarioID = usuarioID;
+        this.rolID = rolID;
         this.nombre = nombre;
         this.apellido = apellido;
         this.correo = correo;
         this.contrasena = contrasena;
-        this.rol = rol;
     }
 
+    //getters y setters
     public int getUsuarioID() {
         return usuarioID;
     }
 
     public void setUsuarioID(int usuarioID) {
         this.usuarioID = usuarioID;
+    }
+
+    public int getRolID() {
+        return rolID;
+    }
+
+    public void setRolID(int rolID) {
+        this.rolID = rolID;
     }
 
     public String getNombre() {
@@ -60,18 +71,5 @@ public class Usuario {
 
     public void setContrasena(String contrasena) {
         this.contrasena = contrasena;
-    }
-
-    public Rol getRol() {
-        return rol;
-    }
-
-    public void setRol(Rol rol) {
-        this.rol = rol;
-    }
-
-    @Override
-    public String toString() {
-        return nombre + " " + apellido;
     }
 }
